@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<title>software &ndash; Maarten Bussler</title>
+<title>huffman and arithmetic coding &ndash; Maarten Bussler</title>
 <link rel="dns-prefetch" href="//fonts.googleapis.com">
 
 <link rel="alternate" type="application/rss+xml" title="Maarten Bussler &raquo; Feed" href="https://bussler.github.io/feed/">
@@ -24,25 +24,27 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 <link rel="stylesheet" id="elementor-post-63-css" href="https://bussler.github.io/wp-content/uploads/elementor/css/post-63.css?ver=1601656546" media="all">
 <link rel="stylesheet" id="font-awesome-5-all-css" href="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.0.8.1" media="all">
 <link rel="stylesheet" id="font-awesome-4-shim-css" href="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.0.8.1" media="all">
-<link rel="stylesheet" id="elementor-post-294-css" href="https://bussler.github.io/wp-content/uploads/elementor/css/post-294.css?ver=1602766005" media="all">
+<link rel="stylesheet" id="elementor-post-660-css" href="https://bussler.github.io/wp-content/uploads/elementor/css/post-660.css?ver=1602766008" media="all">
 <link rel="stylesheet" id="hfe-widgets-style-css" href="https://bussler.github.io/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.5.3" media="all">
 <link rel="stylesheet" id="elementor-post-44-css" href="https://bussler.github.io/wp-content/uploads/elementor/css/post-44.css?ver=1601827073" media="all">
 <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPermanent+Marker%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.5.1" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-brands-css" href="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0" media="all">
 
 <script src="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.0.8.1" id="font-awesome-4-shim-js"></script>
-<link rel="alternate" type="application/json" href="https://bussler.github.io/wp-json/wp/v2/pages/294">
+<link rel="alternate" type="application/json" href="https://bussler.github.io/wp-json/wp/v2/pages/660">
 
-<link rel="canonical" href="https://bussler.github.io/software/">
+<link rel="canonical" href="https://bussler.github.io/huffman-and-arithmetic-coding/">
 
-<link rel="alternate" type="application/json+oembed" href="https://bussler.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbussler.github.io%2Fsoftware%2F">
-<link rel="alternate" type="text/xml+oembed" href="https://bussler.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbussler.github.io%2Fsoftware%2F&amp;format=xml">
+<link rel="alternate" type="application/json+oembed" href="https://bussler.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbussler.github.io%2Fhuffman-and-arithmetic-coding%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://bussler.github.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbussler.github.io%2Fhuffman-and-arithmetic-coding%2F&amp;format=xml">
 <style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://bussler.github.io/wp-content/uploads/2020/09/cropped-LogoOwl-1-e1600299486624-2-32x32.png" sizes="32x32">
 <link rel="icon" href="https://bussler.github.io/wp-content/uploads/2020/09/cropped-LogoOwl-1-e1600299486624-2-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="https://bussler.github.io/wp-content/uploads/2020/09/cropped-LogoOwl-1-e1600299486624-2-180x180.png">
 <meta name="msapplication-TileImage" content="https://bussler.github.io/wp-content/uploads/2020/09/cropped-LogoOwl-1-e1600299486624-2-270x270.png">
 </head>
 
-<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="page-template-default page page-id-294 wp-custom-logo ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-2.5.5 ast-header-custom-item-inside ast-single-post ast-mobile-inherit-site-logo ast-inherit-site-logo-transparent ast-theme-transparent-header elementor-default elementor-kit-63 elementor-page elementor-page-294">
+<body itemtype="https://schema.org/WebPage" itemscope="itemscope" class="page-template-default page page-id-660 wp-custom-logo ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-2.5.5 ast-header-custom-item-inside ast-single-post ast-mobile-inherit-site-logo ast-inherit-site-logo-transparent ast-theme-transparent-header elementor-default elementor-kit-63 elementor-page elementor-page-660">
 
 <div class="hfeed site" id="page">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -79,9 +81,9 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 		</div>
 			<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="ast-flex-grow-1 navigation-accessibility" id="site-navigation" aria-label="Site Navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation"><ul id="primary-menu" class="main-header-menu ast-nav-menu ast-flex ast-justify-content-flex-end  submenu-with-border"><li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-64"><a href="https://bussler.github.io/" class="menu-link">Home</a></li>
 <li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="https://bussler.github.io/about-me/" class="menu-link">About Me</a></li>
-<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-66"><a href="https://bussler.github.io/projects/" class="menu-link">Projects</a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span></button>
+<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-66"><a href="https://bussler.github.io/projects/" class="menu-link">Projects</a><button class="ast-menu-toggle" aria-expanded="false"><span class="screen-reader-text">Menu Toggle</span></button>
 <ul class="sub-menu">
-	<li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-294 current_page_item menu-item-306"><a href="https://bussler.github.io/software/" aria-current="page" class="menu-link">Software</a></li>
+	<li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="https://bussler.github.io/software/" class="menu-link">Software</a></li>
 	<li id="menu-item-578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-578"><a href="https://bussler.github.io/games/" class="menu-link">Games</a></li>
 	<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="https://bussler.github.io/papers/" class="menu-link">Paper</a></li>
 </ul>
@@ -113,7 +115,7 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 					
 					
 
-<article class="post-294 page type-page status-publish ast-article-single" id="post-294" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+<article class="post-660 page type-page status-publish ast-article-single" id="post-660" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
 
 	
 	<header class="entry-header ast-header-without-markup">
@@ -124,19 +126,19 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 	<div class="entry-content clear" itemprop="text">
 
 		
-				<div data-elementor-type="wp-page" data-elementor-id="294" class="elementor elementor-294" data-elementor-settings="[]">
+				<div data-elementor-type="wp-page" data-elementor-id="660" class="elementor elementor-660" data-elementor-settings="[]">
 						<div class="elementor-inner">
 							<div class="elementor-section-wrap">
-							<section class="elementor-section elementor-top-section elementor-element elementor-element-a482eee elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a482eee" data-element_type="section" data-settings='{"background_background":"classic"}'>
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-c428f62 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c428f62" data-element_type="section" data-settings='{"background_background":"classic"}'>
 							<div class="elementor-background-overlay"></div>
 							<div class="elementor-container elementor-column-gap-default">
 							<div class="elementor-row">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d587932" data-id="d587932" data-element_type="column">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-240d68d" data-id="240d68d" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-3ffb327 elementor-widget elementor-widget-heading" data-id="3ffb327" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-element elementor-element-b61ceea elementor-widget elementor-widget-heading" data-id="b61ceea" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h1 class="elementor-heading-title elementor-size-default">Software</h1>		</div>
+			<h1 class="elementor-heading-title elementor-size-default">huffman and arithmetic coding</h1>		</div>
 				</div>
 						</div>
 					</div>
@@ -144,49 +146,41 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 								</div>
 					</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-c6fccb1 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c6fccb1" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-wide">
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-b5188ad elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b5188ad" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
 							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c02a998" data-id="c02a998" data-element_type="column">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-13018d9" data-id="13018d9" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-c1d9369 elementor-widget elementor-widget-image" data-id="c1d9369" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-element elementor-element-513517e elementor-widget elementor-widget-image-gallery" data-id="513517e" data-element_type="widget" data-widget_type="image-gallery.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="1024" height="682" src="https://bussler.github.io/wp-content/uploads/2020/10/Bonsai-1024x682.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://bussler.github.io/wp-content/uploads/2020/10/Bonsai-1024x682.png 1024w,https://bussler.github.io/wp-content/uploads/2020/10/Bonsai-300x200.png 300w,https://bussler.github.io/wp-content/uploads/2020/10/Bonsai-768x511.png 768w,https://bussler.github.io/wp-content/uploads/2020/10/Bonsai.png 1233w" sizes="(max-width: 1024px) 100vw, 1024px">											</div>
-				</div>
-				</div>
-						</div>
-					</div>
+					<div class="elementor-image-gallery">
+			<div id="gallery-1" class="gallery galleryid-660 gallery-columns-4 gallery-size-medium"><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="513517e" data-elementor-lightbox-title="ac example" href="https://bussler.github.io/wp-content/uploads/2020/10/ac-example.png"><img width="300" height="187" src="https://bussler.github.io/wp-content/uploads/2020/10/ac-example-300x187.png" class="attachment-medium size-medium" alt="" loading="lazy" aria-describedby="gallery-1-672" srcset="https://bussler.github.io/wp-content/uploads/2020/10/ac-example-300x187.png 300w,https://bussler.github.io/wp-content/uploads/2020/10/ac-example.png 696w" sizes="(max-width: 300px) 100vw, 300px"></a>
+			</div>
+				<figcaption class="wp-caption-text gallery-caption" id="gallery-1-672">
+				Example of Arithmetic Coding (M. Sinaie and V. T. Vakili, 2010)
+				</figcaption></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="513517e" data-elementor-lightbox-title="Huffman tree example" href="https://bussler.github.io/wp-content/uploads/2020/10/Huffman-tree-example.png"><img width="300" height="247" src="https://bussler.github.io/wp-content/uploads/2020/10/Huffman-tree-example-300x247.png" class="attachment-medium size-medium" alt="" loading="lazy" aria-describedby="gallery-1-673" srcset="https://bussler.github.io/wp-content/uploads/2020/10/Huffman-tree-example-300x247.png 300w,https://bussler.github.io/wp-content/uploads/2020/10/Huffman-tree-example.png 511w" sizes="(max-width: 300px) 100vw, 300px"></a>
+			</div>
+				<figcaption class="wp-caption-text gallery-caption" id="gallery-1-673">
+				Example for a Huffman Tree (M. Stabno and R. Wrembel, 2009)
+				</figcaption></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="513517e" data-elementor-lightbox-title="decoded" href="https://bussler.github.io/wp-content/uploads/2020/10/decoded.png"><img width="300" height="51" src="https://bussler.github.io/wp-content/uploads/2020/10/decoded-300x51.png" class="attachment-medium size-medium" alt="" loading="lazy" aria-describedby="gallery-1-677" srcset="https://bussler.github.io/wp-content/uploads/2020/10/decoded-300x51.png 300w,https://bussler.github.io/wp-content/uploads/2020/10/decoded-1024x174.png 1024w,https://bussler.github.io/wp-content/uploads/2020/10/decoded-768x130.png 768w,https://bussler.github.io/wp-content/uploads/2020/10/decoded.png 1191w" sizes="(max-width: 300px) 100vw, 300px"></a>
+			</div>
+				<figcaption class="wp-caption-text gallery-caption" id="gallery-1-677">
+				Original/ Decoded Text: 600 Byte
+				</figcaption></figure><figure class="gallery-item">
+			<div class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="yes" data-elementor-lightbox-slideshow="513517e" data-elementor-lightbox-title="encoded" href="https://bussler.github.io/wp-content/uploads/2020/10/encoded.png"><img width="300" height="53" src="https://bussler.github.io/wp-content/uploads/2020/10/encoded-300x53.png" class="attachment-medium size-medium" alt="" loading="lazy" aria-describedby="gallery-1-678" srcset="https://bussler.github.io/wp-content/uploads/2020/10/encoded-300x53.png 300w,https://bussler.github.io/wp-content/uploads/2020/10/encoded-1024x182.png 1024w,https://bussler.github.io/wp-content/uploads/2020/10/encoded-768x136.png 768w,https://bussler.github.io/wp-content/uploads/2020/10/encoded.png 1307w" sizes="(max-width: 300px) 100vw, 300px"></a>
+			</div>
+				<figcaption class="wp-caption-text gallery-caption" id="gallery-1-678">
+				Encoded Text: 400 Byte
+				</figcaption></figure>
 		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-be8f7c5" data-id="be8f7c5" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-c475c85 elementor-widget elementor-widget-heading" data-id="c475c85" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Bachelor Thesis: TTHRESH</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-7c7ac56 elementor-widget elementor-widget-divider" data-id="7c7ac56" data-element_type="widget" data-widget_type="divider.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-divider">
-			<span class="elementor-divider-separator">
-						</span>
-		</div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-d5d99d5 elementor-widget elementor-widget-text-editor" data-id="d5d99d5" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p>Project for my Bachelor&rsquo;s Thesis. Implemented is an algorithm for efficient compression and decompression of volume data sets based on the TTHRESH-algorithm by R. Ballester-Ripoll.</p></div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-5f8562b elementor-invisible elementor-widget elementor-widget-button" data-id="5f8562b" data-element_type="widget" data-settings='{"_animation":"none"}' data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a href="https://bussler.github.io/wordpress/tthresh/" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-text">Take a look</span>
-		</span>
-					</a>
 		</div>
 				</div>
 				</div>
@@ -196,17 +190,17 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 								</div>
 					</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-fcd0156 elementor-section-height-min-height elementor-section-content-middle elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="fcd0156" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-wide">
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-d7f2c8a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d7f2c8a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
 							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-06eda34" data-id="06eda34" data-element_type="column">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f201fbe" data-id="f201fbe" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-3993954 elementor-widget elementor-widget-heading" data-id="3993954" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-element elementor-element-8220514 elementor-widget elementor-widget-heading" data-id="8220514" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Python Sudoku Solver</h2>		</div>
+			<h2 class="elementor-heading-title elementor-size-default">ABout</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-97d234c elementor-widget elementor-widget-divider" data-id="97d234c" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-element elementor-element-1fc364d elementor-widget elementor-widget-divider" data-id="1fc364d" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-divider">
 			<span class="elementor-divider-separator">
@@ -214,32 +208,15 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 		</div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-24a8683 elementor-widget elementor-widget-text-editor" data-id="24a8683" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p>Program to solve and generate Sudoku Problems with backtracking and learn GUI with pygame.</p></div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-32e8e7b elementor-invisible elementor-widget elementor-widget-button" data-id="32e8e7b" data-element_type="widget" data-settings='{"_animation":"none"}' data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a href="https://bussler.github.io/wordpress/pythonsodokusolver/" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-text">Take a look</span>
-		</span>
-					</a>
-		</div>
-				</div>
-				</div>
 						</div>
 					</div>
 		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3f5655a" data-id="3f5655a" data-element_type="column">
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e16288f" data-id="e16288f" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-9b7806b elementor-widget elementor-widget-image" data-id="9b7806b" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-element elementor-element-f2a4d41 elementor-widget elementor-widget-text-editor" data-id="f2a4d41" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="298" height="300" src="https://bussler.github.io/wp-content/uploads/2020/10/sod1-298x300.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="https://bussler.github.io/wp-content/uploads/2020/10/sod1-298x300.png 298w,https://bussler.github.io/wp-content/uploads/2020/10/sod1-1018x1024.png 1018w,https://bussler.github.io/wp-content/uploads/2020/10/sod1-150x150.png 150w,https://bussler.github.io/wp-content/uploads/2020/10/sod1-768x772.png 768w,https://bussler.github.io/wp-content/uploads/2020/10/sod1.png 1076w" sizes="(max-width: 298px) 100vw, 298px">											</div>
+					<div class="elementor-text-editor elementor-clearfix"><p class="f4 mt-3">Implementation of the Huffman and Arithmetic Coding compression techniques for efficient encoding of data.</p><p class="f4 mt-3">With this console application, any files can be efficiently encoded and decoded to minimize their filesize. Although both Huffman and Arithmetic Coding are entropy encoding techniques and work in a similar way, AC offers the better performance in general and it is thus advised to use this encoding algorithm for the vast majority of files.</p><p class="f4 mt-3">A more thorough explanation and analysis of these algorithms can be found in my <a href="https://bussler.github.io/wp-content/uploads/2020/10/Bachelor_Thesis_Volume_Data_Compression_Maarten_Bussler.pdf" target="_blank" rel="noopener" data-wplink-url-error="true">Bachelor&rsquo;s Thesis</a>.</p><p>&nbsp;</p></div>
 				</div>
 				</div>
 						</div>
@@ -248,29 +225,17 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 								</div>
 					</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-c07c81a elementor-section-height-min-height elementor-section-content-middle elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="c07c81a" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-wide">
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-18f1012 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="18f1012" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
 							<div class="elementor-row">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c8c5868" data-id="c8c5868" data-element_type="column">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-9c6d5ff" data-id="9c6d5ff" data-element_type="column">
 			<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-d983fd6 elementor-widget elementor-widget-image" data-id="d983fd6" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-element elementor-element-d89e24b elementor-widget elementor-widget-heading" data-id="d89e24b" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-image">
-										<img width="300" height="187" src="https://bussler.github.io/wp-content/uploads/2020/10/ac-example-300x187.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="https://bussler.github.io/wp-content/uploads/2020/10/ac-example-300x187.png 300w,https://bussler.github.io/wp-content/uploads/2020/10/ac-example.png 696w" sizes="(max-width: 300px) 100vw, 300px">											</div>
+			<h2 class="elementor-heading-title elementor-size-default">Goal</h2>		</div>
 				</div>
-				</div>
-						</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-25b545f" data-id="25b545f" data-element_type="column">
-			<div class="elementor-column-wrap elementor-element-populated">
-							<div class="elementor-widget-wrap">
-						<div class="elementor-element elementor-element-d8ea327 elementor-widget elementor-widget-heading" data-id="d8ea327" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-			<h2 class="elementor-heading-title elementor-size-default">Huffman and arithmetic coding</h2>		</div>
-				</div>
-				<div class="elementor-element elementor-element-d78dc5e elementor-widget elementor-widget-divider" data-id="d78dc5e" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-element elementor-element-62c03c4 elementor-widget elementor-widget-divider" data-id="62c03c4" data-element_type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-divider">
 			<span class="elementor-divider-separator">
@@ -278,20 +243,43 @@ html{font-size:100%;}a,.page-title{color:#1a6c7a;}a:hover,a:focus{color:#3a3a3a;
 		</div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-2a5a965 elementor-widget elementor-widget-text-editor" data-id="2a5a965" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-text-editor elementor-clearfix"><p>Implementation of the Hufman and Arithmetic Coding compression techniques for efficient encoding of data</p></div>
-				</div>
-				</div>
-				<div class="elementor-element elementor-element-a4abb6a elementor-invisible elementor-widget elementor-widget-button" data-id="a4abb6a" data-element_type="widget" data-settings='{"_animation":"none"}' data-widget_type="button.default">
-				<div class="elementor-widget-container">
-					<div class="elementor-button-wrapper">
-			<a href="https://bussler.github.io/wordpress/huffman-and-arithmetic-coding/" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-						<span class="elementor-button-content-wrapper">
-						<span class="elementor-button-text">Take a look</span>
-		</span>
-					</a>
+						</div>
+					</div>
 		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-46a0aff" data-id="46a0aff" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2334fe0 elementor-widget elementor-widget-text-editor" data-id="2334fe0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>I already implemented Huffman Coding and Arithmetic Coding for my Bachelor&rsquo;s Thesis to efficiently compress volume data, but I wanted to make these scripts more easily accessible and to work on any txt files, not only on three dimensional volume data.</p></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a841a9e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a841a9e" data-element_type="section" data-settings='{"background_background":"classic"}'>
+						<div class="elementor-container elementor-column-gap-no">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e576a26" data-id="e576a26" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c288eb1 elementor-widget elementor-widget-heading" data-id="c288eb1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Github</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5eb528f elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="5eb528f" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+					<a href="https://github.com/Bussler/Arithmetic-and-huffmann-coding" target="_blank">						<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-github"></i>						</span>
+										<span class="elementor-icon-list-text">Bussler/Arithmetic-and-huffmann-coding</span>
+											</a>
+									</li>
+						</ul>
 				</div>
 				</div>
 						</div>
@@ -424,7 +412,7 @@ var astra = {"break_point":"921","isRtl":""};
 <script src="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
 <script src="https://bussler.github.io/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.8.1" id="share-link-js"></script>
 <script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.8.1","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/bussler.github.io\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":294,"title":"software%20%E2%80%93%20Maarten%20Bussler","excerpt":"","featuredImage":false}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.8.1","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/bussler.github.io\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":660,"title":"huffman%20and%20arithmetic%20coding%20%E2%80%93%20Maarten%20Bussler","excerpt":"","featuredImage":false}};
 </script>
 <script src="https://bussler.github.io/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.8.1" id="elementor-frontend-js"></script>
 <script src="https://bussler.github.io/wp-includes/js/underscore.min.js?ver=1.8.3" id="underscore-js"></script>
