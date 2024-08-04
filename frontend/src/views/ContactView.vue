@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
-import InfoDialog from '@/components/InfoComponent.vue'
+import Linker from '@/components/common/Linker.vue'
 
 const titlebar = useToolbarStore()
 
@@ -24,20 +24,22 @@ onMounted(async () => {
   <Card>
     <template #title>Get in Touch</template>
     <template #content>
+      <h2>Email</h2>
+      <span><i class="pi pi-inbox"></i> maarten.bussler@gmail.com</span>
 
-        <h2>Email</h2>
-        <span><i class="pi pi-inbox"></i> maarten.bussler@gmail.com</span>
+      <h2>Github</h2>
+      <Linker
+        text="github.com/Bussler"
+        reference="https://github.com/Bussler"
+        icon="pi pi-github"
+      />
 
-        <h2>Github</h2>
-        <a href="https://github.com/Bussler" class="no-underline" target="_blank" rel="noopener noreferrer">
-        <span class="hover-text"><i class="pi pi-github"></i> github.com/Bussler</span>
-        </a>
-
-        <h2>Social</h2>
-        <a href="https://www.linkedin.com/in/maarten-bussler-0a4a21194/" class="no-underline" target="_blank" rel="noopener noreferrer">
-        <span class="hover-text"><i class="pi pi-linkedin"></i> LinkedIn: Maarten Bussler</span>
-        </a>
-
+      <h2>Social</h2>
+      <Linker
+        text="LinkedIn: Maarten Bussler"
+        reference="https://www.linkedin.com/in/maarten-bussler-0a4a21194/"
+        icon="pi pi-linkedin"
+      />
     </template>
   </Card>
 </template>
@@ -59,5 +61,4 @@ span i {
 .hover-text:hover {
   color: var(--primary-color-light); /* Change to your desired hover color */
 }
-
 </style>
