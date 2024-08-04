@@ -30,7 +30,7 @@ onMounted(async () => {
         University Munich.</span
       >
       <br />
-      <span>I use this site to showcase my projects that amassed over the years.</span>
+      <span>I use this site to showcase my projects that amassed over the years. If you are interested in something, feel free to contact me 😄</span>
 
       <div class="panel-margin">
         <h2 class="important-heading">New</h2>
