@@ -12,6 +12,11 @@ export const routes = [
     name: 'about',
     component: () => import('@/views/AboutView.vue'),
   },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('@/views/ContactView.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,7 +69,7 @@ export const menu: MenuItem[] = [
     label: 'Contact',
     icon: 'pi pi-envelope',
     command: () => {
-      router.push({ name: 'about' })
+      router.push({ name: 'contact' })
     },
   },
 ]

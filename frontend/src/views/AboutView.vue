@@ -2,8 +2,17 @@
 import { ref, onMounted } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
 import InfoDialog from '@/components/InfoComponent.vue'
+import router from '@/router'
 
 const titlebar = useToolbarStore()
+
+const toolbarComponents = [
+  {
+    label: 'Contact',
+    icon: 'pi pi-fw pi-envelope',
+    command: () => router.push({ name: 'contact' }),
+  },
+]
 
 const showInfoDialog = ref(false)
 
@@ -16,7 +25,7 @@ function showInformation() {
 }
 
 onMounted(async () => {
-  titlebar.clearToolbarComponents()
+  titlebar.setToolbarComponents(toolbarComponents)
 })
 </script>
 

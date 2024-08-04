@@ -20,6 +20,9 @@ import Message from 'primevue/message'
 import Toast from 'primevue/toast'
 import ToastService from 'primevue/toastservice'
 import FileUpload from 'primevue/fileupload'
+import Splitter from 'primevue/splitter'
+import SplitterPanel from 'primevue/splitterpanel'
+import Panel from 'primevue/panel'
 import router from './router'
 import App from './App.vue'
 
@@ -57,5 +60,8 @@ app.component('Column', Column)
 app.component('ColumnGroup', ColumnGroup)
 app.component('Row', Row)
 app.component('InputText', InputText)
+app.component('Splitter', Splitter)
+app.component('SplitterPanel', SplitterPanel)
+app.component('Panel', Panel)
 
 app.mount('#app')
