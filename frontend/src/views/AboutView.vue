@@ -3,6 +3,8 @@ import { ref, onMounted } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
 import router from '@/router'
 import Linker from '@/components/common/Linker.vue'
+import InfoComponent from '@/components/common/InfoComponent.vue'
+import InfoListComponent from '@/components/common/InfoListComponent.vue'
 
 const titlebar = useToolbarStore()
 
@@ -13,12 +15,6 @@ const toolbarComponents = [
     command: () => router.push({ name: 'contact' }),
   },
 ]
-
-const showInfoDialog = ref(false)
-
-const loremIpsumText = ref(
-  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
-)
 
 onMounted(async () => {
   titlebar.setToolbarComponents(toolbarComponents)
@@ -70,57 +66,41 @@ onMounted(async () => {
         </div>
       </div>
 
-      <Card class="panel-margin">
-        <template #title>
-          <span class="important-heading">Interests</span>
-        </template>
-        <template #content>
-          <div class="interests-container">
-            <div class="interests-column">
-              <h3>Computer Science</h3>
-              <ul class="interests-list">
-                <li>Machine Learning</li>
-                <li>Computer Vision</li>
-                <li>
-                  Visual data analytics and data visualization, especially the possibilities of
-                  volume data
-                </li>
-                <li>Efficient and parallel programming</li>
-                <li>Exploring and testing new technologies, attending Hackathons</li>
-              </ul>
-            </div>
-            <div class="interests-column">
-              <h3>Freetime</h3>
-              <ul class="interests-list">
-                <li>Guitar</li>
-                <li>Tennis</li>
-                <li>Bouldering</li>
-              </ul>
-            </div>
-          </div>
-        </template>
-      </Card>
+      <InfoListComponent
+        headline="Interests"
+        :list-items="[
+          {
+            headline: 'Computer Science',
+            textItems: [
+              'Machine Learning',
+              'Computer Vision',
+              'Visual data analytics and data visualization, especially the possibilities of volume data',
+              'Efficient and parallel programming',
+              'Exploring and testing new technologies, attending Hackathons',
+            ],
+          },
+          { headline: 'Freetime', textItems: ['Guitar', 'Tennis', 'Bouldering'] },
+        ]"
+      />
 
-      <Card class="panel-margin">
-        <template #title>
-          <span class="important-heading">Technical Skills</span>
-        </template>
-        <template #content>
-          <div class="interests-container">
-            <div class="interests-column">
-              <ul class="interests-list">
-                <li>Python, Pytorch</li>
-                <li>C/ C++</li>
-                <li>C#</li>
-                <li>Fullstack (Vuejs, Fastapi, Sqalchemy)</li>
-                <li>Docker, Kubernetes</li>
-                <li>Unity Game Development</li>
-                <li>Autodesk 3d</li>
-              </ul>
-            </div>
-          </div>
-        </template>
-      </Card>
+      <InfoListComponent
+        headline="Technical Skills"
+        :list-items="[
+          {
+            headline: '',
+            textItems: [
+              'Python, Pytorch',
+              'C/ C++',
+              'C#',
+              'Fullstack (Vuejs, Fastapi, Sqalchemy)',
+              'Docker, Kubernetes',
+              'Unity Game Development',
+              'Autodesk 3d'
+            ],
+          },
+        ]"
+      />
+      
     </template>
   </Card>
 </template>
@@ -139,7 +119,7 @@ onMounted(async () => {
 
 .about-image {
   width: 100%; /* Set the image width to 100% of its container */
-  max-width: 350px;
+  max-width: 300px;
   height: auto; /* Maintain the aspect ratio */
   border-radius: 30%; /* Optional: Make the image circular */
 }
@@ -153,7 +133,7 @@ a i {
 }
 
 .panel-margin {
-  margin-top: 4ch; /* Adjust the value as needed */
+  margin-top: 3ch; /* Adjust the value as needed */
 }
 
 .panel-margin-small {
@@ -172,14 +152,6 @@ a i {
 
 .interests-column {
   flex: 1; /* Allow each column to take up equal space */
-}
-
-.interests-list {
-  flex: 1; /* Allow each list to take up equal space */
-}
-
-.interests-list li {
-  margin-bottom: 5px; /* Add space between list items */
 }
 
 .hover-text {
