@@ -39,7 +39,11 @@ onMounted(async () => {
             <Card class="see-through-panel">
               <template #title>SRN Compression</template>
               <template #content>
-                <img src="/images/deformed/deformed3-1536x866.png" class="card-image" alt="Image 3">
+                <img
+                  src="/images/deformed/deformed3-1536x866.png"
+                  class="card-image"
+                  alt="Image 3"
+                />
               </template>
             </Card>
           </router-link>
@@ -47,7 +51,11 @@ onMounted(async () => {
             <Card class="see-through-panel">
               <template #title>DSNeRF</template>
               <template #content>
-                <img src="/images/deformed/deformed3-1536x866.png" class="card-image" alt="Image 3">
+                <img
+                  src="/images/deformed/deformed3-1536x866.png"
+                  class="card-image"
+                  alt="Image 3"
+                />
               </template>
             </Card>
           </router-link>
@@ -55,7 +63,11 @@ onMounted(async () => {
             <Card class="see-through-panel">
               <template #title>Vectorstorage LLM</template>
               <template #content>
-                <img src="/images/deformed/deformed3-1536x866.png" class="card-image" alt="Image 3">
+                <img
+                  src="/images/deformed/deformed3-1536x866.png"
+                  class="card-image"
+                  alt="Image 3"
+                />
               </template>
             </Card>
           </router-link>
@@ -106,5 +118,4 @@ onMounted(async () => {
   text-decoration: none; /* Remove underline from text */
   color: inherit; /* Inherit the color from the parent element */
 }
-
 </style>
