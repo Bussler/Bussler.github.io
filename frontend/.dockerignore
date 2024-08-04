@@ -1,0 +1,14 @@
+# Exclude log files
+*.log
+
+# Exclude temporary files
+.tmp/
+
+# Exclude the node_modules directory
+node_modules/
+
+# Exclude all files and directories that start with "temp_"
+temp_*
+
+# Exclude a specific file
+config/secrets.txt

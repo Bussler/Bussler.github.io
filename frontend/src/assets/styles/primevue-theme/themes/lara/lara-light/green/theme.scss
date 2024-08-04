@@ -1,0 +1,25 @@
+$primaryColor: #005b41 !default;
+$primaryLightColor: #008170 !default;
+$primaryDarkColor: #232d3f !default;
+$primaryDarkerColor: #0f0f0f !default;
+$primaryTextColor: #ffffff !default;
+
+$highlightBg: #eff6ff !default;
+$highlightTextColor: $primaryDarkerColor !default;
+$highlightFocusBg: rgba($primaryColor, 0.24) !default;
+
+$secondaryButtonBg: $primaryTextColor !default;
+$secondaryButtonTextColor: $primaryColor !default;
+$secondaryButtonBorder: 1px solid $primaryColor !default;
+$secondaryButtonHoverBg: #eaeaf0 !default;
+$secondaryButtonTextHoverColor: $secondaryButtonTextColor !default;
+$secondaryButtonHoverBorderColor: #475569 !default;
+$secondaryButtonActiveBg: rgb(164, 168, 175) !default;
+$secondaryButtonTextActiveColor: $secondaryButtonTextColor !default;
+$secondaryButtonActiveBorderColor: #334155 !default;
+$secondaryButtonFocusShadow: 0 0 0 0.2rem #e2e8f0 !default;
+
+@import '../_variables';
+@import './_fonts';
+@import '../../../../theme-base/_components';
+@import '../_extensions';

@@ -1,0 +1,42 @@
+@import 'primeflex/primeflex.scss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@import 'primeicons/primeicons.css';
+// @import './primevue-theme/themes/lara/lara-light/blue/theme.scss';
+@import './primevue-theme/themes/lara/lara-light/green/theme.scss';
+
+body {
+  margin: 0;
+  background-color: var(--bluegray-100);
+}
+
+// addition to the datatable
+.p-datatable {
+  .empty-input {
+    cursor: text;
+  }
+
+  .p-datatable-header,
+  .p-datatable-footer {
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2;
+    }
+  }
+
+  .actions {
+    float: right;
+
+    button,
+    a {
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
