@@ -95,12 +95,12 @@ onMounted(async () => {
               'Fullstack (Vuejs, Fastapi, Sqalchemy)',
               'Docker, Kubernetes',
               'Unity Game Development',
-              'Autodesk 3d'
+              'Autodesk 3d',
             ],
           },
         ]"
       />
-      
+
     </template>
   </Card>
 </template>
