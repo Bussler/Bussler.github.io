@@ -2,9 +2,7 @@
 import { onMounted } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
 import router from '@/router'
-import Splitter from 'primevue/splitter'
-import SplitterPanel from 'primevue/splitterpanel'
-import Panel from 'primevue/panel'
+import LinkCard from '@/components/common/LinkCard.vue'
 
 const titlebar = useToolbarStore()
 
@@ -39,48 +37,17 @@ onMounted(async () => {
       <div class="panel-margin">
         <h2 class="important-heading">New</h2>
         <div class="card-container">
-          <router-link to="contact" class="no-underline">
-            <Card class="see-through-panel">
-              <template #title>
-                <span class="hover-text">SRN Compression</span>
-              </template>
-              <template #content>
-                <img
-                  src="/images/deformed/deformed3-1536x866.png"
-                  class="card-image"
-                  alt="Image 3"
-                />
-              </template>
-            </Card>
-          </router-link>
-          <router-link to="contact" class="no-underline">
-            <Card class="see-through-panel">
-              <template #title>
-                <span class="hover-text">DSNeRF</span>
-              </template>
-              <template #content>
-                <img
-                  src="/images/deformed/deformed3-1536x866.png"
-                  class="card-image"
-                  alt="Image 3"
-                />
-              </template>
-            </Card>
-          </router-link>
-          <router-link to="contact" class="no-underline">
-            <Card class="see-through-panel">
-              <template #title>
-                <span class="hover-text">Vectorstorage LLM</span>
-              </template>
-              <template #content>
-                <img
-                  src="/images/deformed/deformed3-1536x866.png"
-                  class="card-image"
-                  alt="Image 3"
-                />
-              </template>
-            </Card>
-          </router-link>
+          <LinkCard
+            link="contact"
+            title="SRN Compression"
+            image="/images/deformed/deformed3-1536x866.png"
+          />
+          <LinkCard link="contact" title="DSNeRF" image="/images/deformed/deformed3-1536x866.png" />
+          <LinkCard
+            link="contact"
+            title="Vectorstorage LLM"
+            image="/images/deformed/deformed3-1536x866.png"
+          />
         </div>
       </div>
     </template>
@@ -110,30 +77,7 @@ onMounted(async () => {
   flex: 1; /* Make each card take equal space */
 }
 
-.see-through-panel {
-  background-color: rgb(255, 255, 255, 0.1); /* White background with 50% opacity */
-  color: var(--primary-color-text);
-}
-
-.card-image {
-  width: 100%; /* Set the image width to 100% of the card's width */
-  height: auto; /* Maintain the aspect ratio */
-}
-
 .important-heading {
   color: var(--primary-accent-color); /* Set your desired text color */
-}
-
-.no-underline {
-  text-decoration: none; /* Remove underline from text */
-  color: inherit; /* Inherit the color from the parent element */
-}
-
-.hover-text {
-  transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.hover-text:hover {
-  color: var(--primary-color-light); /* Change to your desired hover color */
 }
 </style>
