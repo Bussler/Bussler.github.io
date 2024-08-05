@@ -3,7 +3,6 @@ import { ref, onMounted } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
 import router from '@/router'
 import Linker from '@/components/common/Linker.vue'
-import InfoComponent from '@/components/common/InfoComponent.vue'
 import InfoListComponent from '@/components/common/InfoListComponent.vue'
 
 const titlebar = useToolbarStore()
@@ -17,7 +16,8 @@ const toolbarComponents = [
 ]
 
 onMounted(async () => {
-  titlebar.setToolbarComponents(toolbarComponents)
+  titlebar.clearToolbarComponents()
+  // titlebar.setToolbarComponents(toolbarComponents)
 })
 </script>
 
@@ -100,7 +100,6 @@ onMounted(async () => {
           },
         ]"
       />
-
     </template>
   </Card>
 </template>

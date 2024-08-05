@@ -13,6 +13,11 @@ export const routes = [
     component: () => import('@/views/AboutView.vue'),
   },
   {
+    path: '/papers',
+    name: 'papers',
+    component: () => import('@/views/PapersView.vue'),
+  },
+  {
     path: '/contact',
     name: 'contact',
     component: () => import('@/views/ContactView.vue'),
@@ -60,7 +65,7 @@ export const menu: MenuItem[] = [
         label: 'Paper',
         icon: 'pi pi-file',
         command: () => {
-          router.push({ name: 'about' })
+          router.push({ name: 'papers' })
         },
       },
     ],

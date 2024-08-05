@@ -5,16 +5,6 @@ import Linker from '@/components/common/Linker.vue'
 
 const titlebar = useToolbarStore()
 
-const showInfoDialog = ref(false)
-
-const loremIpsumText = ref(
-  'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.',
-)
-
-function showInformation() {
-  showInfoDialog.value = true
-}
-
 onMounted(async () => {
   titlebar.clearToolbarComponents()
 })

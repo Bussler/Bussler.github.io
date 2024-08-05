@@ -23,6 +23,8 @@ import FileUpload from 'primevue/fileupload'
 import Splitter from 'primevue/splitter'
 import SplitterPanel from 'primevue/splitterpanel'
 import Panel from 'primevue/panel'
+import Accordion from 'primevue/accordion'
+import AccordionTab from 'primevue/accordiontab'
 import router from './router'
 import App from './App.vue'
 
@@ -63,5 +65,7 @@ app.component('InputText', InputText)
 app.component('Splitter', Splitter)
 app.component('SplitterPanel', SplitterPanel)
 app.component('Panel', Panel)
+app.component('Accordion', Accordion)
+app.component('AccordionTab', AccordionTab)
 
 app.mount('#app')

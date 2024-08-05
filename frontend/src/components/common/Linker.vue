@@ -7,13 +7,13 @@ const props = defineProps<{
    */
   text: string
   reference: string
-  icon: string
+  icon: string | null
 }>()
 </script>
 
 <template>
   <a :href="props.reference" class="no-underline hover-text" target="_blank"
-    ><i :class="props.icon"></i>{{ props.text }}</a
+    ><i v-if="props.icon" :class="props.icon"></i>{{ props.text }}</a
   >
 </template>
 

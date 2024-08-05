@@ -17,7 +17,8 @@ const toolbarComponents = [
 ]
 
 onMounted(async () => {
-  titlebar.setToolbarComponents(toolbarComponents)
+  titlebar.clearToolbarComponents()
+  // titlebar.setToolbarComponents(toolbarComponents)
 })
 </script>
 
@@ -38,9 +39,11 @@ onMounted(async () => {
       <div class="panel-margin">
         <h2 class="important-heading">New</h2>
         <div class="card-container">
-          <router-link to="/contact" class="no-underline">
+          <router-link to="contact" class="no-underline">
             <Card class="see-through-panel">
-              <template #title>SRN Compression</template>
+              <template #title>
+                <span class="hover-text">SRN Compression</span>
+              </template>
               <template #content>
                 <img
                   src="/images/deformed/deformed3-1536x866.png"
@@ -50,9 +53,11 @@ onMounted(async () => {
               </template>
             </Card>
           </router-link>
-          <router-link to="/contact" class="no-underline">
+          <router-link to="contact" class="no-underline">
             <Card class="see-through-panel">
-              <template #title>DSNeRF</template>
+              <template #title>
+                <span class="hover-text">DSNeRF</span>
+              </template>
               <template #content>
                 <img
                   src="/images/deformed/deformed3-1536x866.png"
@@ -62,9 +67,11 @@ onMounted(async () => {
               </template>
             </Card>
           </router-link>
-          <router-link to="/contact" class="no-underline">
+          <router-link to="contact" class="no-underline">
             <Card class="see-through-panel">
-              <template #title>Vectorstorage LLM</template>
+              <template #title>
+                <span class="hover-text">Vectorstorage LLM</span>
+              </template>
               <template #content>
                 <img
                   src="/images/deformed/deformed3-1536x866.png"
@@ -86,7 +93,7 @@ onMounted(async () => {
   background-size: cover; /* Adjust to cover the entire card */
   background-position: center; /* Center the image */
   color: var(--primary-color-text); /* Optional: Adjust text color for better readability */
-  height: 90vh; /* Set the desired height */
+  height: 96.5vh; /* Set the desired height */
 }
 
 .panel-margin {
@@ -120,5 +127,13 @@ onMounted(async () => {
 .no-underline {
   text-decoration: none; /* Remove underline from text */
   color: inherit; /* Inherit the color from the parent element */
+}
+
+.hover-text {
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.hover-text:hover {
+  color: var(--primary-color-light); /* Change to your desired hover color */
 }
 </style>
