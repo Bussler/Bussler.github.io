@@ -4,6 +4,7 @@ import { useToolbarStore } from '@/stores/useToolbarStore'
 import router from '@/router'
 import Linker from '@/components/common/Linker.vue'
 import InfoListComponent from '@/components/common/InfoListComponent.vue'
+import InfoComponent from '@/components/common/InfoComponent.vue'
 
 const titlebar = useToolbarStore()
 
@@ -28,43 +29,34 @@ onMounted(async () => {
       <div class="about-container">
         <img src="/images/profile_picture.jpg" alt="Maarten Bussler" class="about-image" />
         <div class="about-text">
-          <span
-            >Hey there! I am Maarten Bussler, a Computer Science & Games Engineering graduate from
-            TUM, currently working in the R&D department at IABG.</span
-          >
-          <br />
-          <span
-            >I often participate in Gamejams and other local meetups and am interested in the topics
-            of computer vision and machine learning.</span
-          >
-
-          <div class="interests-container panel-margin-small">
-            <div class="interests-column">
-              <h3>Bio</h3>
-              <span>I grew up in Cuxhaven, northern Germany. </span>
-              <div class="extended-space"></div>
-              <span
-                >In highschool, I developed an interest for programming and computer science. After
-                the Abitur, I moved to Munich in order to study Informatics with a focus on Games
-                Engineering at the TUM.</span
-              >
-              <div class="extended-space"></div>
-              <span
-                >While at TUM, I became increasingly engaged in the exploration of integrating
-                machine learning with computer vision tasks.</span
-              >
-            </div>
-            <div class="interests-column">
-              <h3>CV</h3>
-              <Linker
-                text="Curriculum Vitae Maarten Bussler"
-                reference="/pdfs/CVMaartenBussler.pdf"
-                icon="pi pi-paperclip"
-              />
-            </div>
-          </div>
+          <h2>Hey there!</h2>
+          <div class="extended-space"></div>
+          <h4>
+            I am Maarten Bussler, a Computer Science & Games Engineering graduate from TUM,
+            currently working in the R&D department at IABG.
+          </h4>
+          <div class="extended-space"></div>
+          <h4>
+            I often participate in Gamejams and other local meetups and am interested in the topics
+            of computer vision and machine learning.
+          </h4>
+          <div class="extended-space"></div>
+          <Linker
+            text="Curriculum Vitae Maarten Bussler"
+            reference="/pdfs/CVMaartenBussler.pdf"
+            icon="pi pi-paperclip"
+          />
         </div>
       </div>
+
+      <InfoComponent
+        headline="Bio"
+        :text="[
+          'I grew up in Cuxhaven, northern Germany.',
+          'In highschool, I developed an interest for programming and computer science. After the Abitur, I moved to Munich in order to study Informatics with a focus on Games Engineering at the TUM.',
+          'While at TUM, I became increasingly engaged in the exploration of integrating machine learning with computer vision tasks.',
+        ]"
+      />
 
       <InfoListComponent
         headline="Interests"
