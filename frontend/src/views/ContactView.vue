@@ -15,7 +15,7 @@ onMounted(async () => {
     <template #title>Get in Touch</template>
     <template #content>
       <h2>Email</h2>
-      <span><i class="pi pi-inbox"></i> maarten.bussler@gmail.com</span>
+      <span><i class="pi pi-envelope"></i> maarten.bussler@gmail.com</span>
 
       <h2>Github</h2>
       <Linker

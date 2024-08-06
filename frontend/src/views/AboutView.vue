@@ -38,14 +38,17 @@ onMounted(async () => {
           <div class="extended-space"></div>
           <h4>
             I often participate in Gamejams and other local meetups and am interested in the topics
-            of computer vision and machine learning.
+            of simulation development and machine learning.
           </h4>
           <div class="extended-space"></div>
-          <Linker
-            text="Curriculum Vitae Maarten Bussler"
-            reference="/pdfs/CVMaartenBussler.pdf"
-            icon="pi pi-paperclip"
-          />
+          <div class="contact-info">
+            <Linker
+              text="Curriculum Vitae Maarten Bussler"
+              reference="/pdfs/CVMaartenBussler.pdf"
+              icon="pi pi-paperclip"
+            />
+            <span><i class="pi pi-envelope"></i> maarten.bussler@gmail.com</span>
+          </div>
         </div>
       </div>
 
@@ -53,8 +56,9 @@ onMounted(async () => {
         headline="Bio"
         :text="[
           'I grew up in Cuxhaven, northern Germany.',
-          'In highschool, I developed an interest for programming and computer science. After the Abitur, I moved to Munich in order to study Informatics with a focus on Games Engineering at the TUM.',
-          'While at TUM, I became increasingly engaged in the exploration of integrating machine learning with computer vision tasks.',
+          'During highschool, I developed an interest in programming and computer science. After the Abitur, I moved to Munich to study Informatics with a focus on Games Engineering at the TUM.',
+          'While at TUM, I became increasingly engaged in the exploration of integrating machine learning with computer vision tasks. My studies culminated in a thesis on the topic of efficient representation and compression of volumentric scene data using neural networks.',
+          'After university, I began working at the Innovationszentrum of IABG, where I focus on simulation and reinforcement learning topics.',
         ]"
       />
 
@@ -64,7 +68,8 @@ onMounted(async () => {
           {
             headline: 'Computer Science',
             textItems: [
-              'Machine Learning',
+              'Deep Machine Learning',
+              'Game/ Simulation Development',
               'Computer Vision',
               'Visual data analytics and data visualization, especially the possibilities of volume data',
               'Efficient and parallel programming',
@@ -107,6 +112,9 @@ onMounted(async () => {
 .extended-space {
   margin: 15px 0; /* Adjust the margin to extend the space */
 }
+.extended-space-more {
+  margin: 25px 0; /* Adjust the margin to extend the space */
+}
 
 .about-image {
   width: 100%; /* Set the image width to 100% of its container */
@@ -119,42 +127,13 @@ onMounted(async () => {
   flex: 1; /* Allow the text to take up the remaining space */
 }
 
-a i {
-  margin-right: 3px; /* Add some space between the icon and the text */
+span i {
+  margin-right: 0px; /* Add some space between the icon and the text */
 }
 
-.panel-margin {
-  margin-top: 3ch; /* Adjust the value as needed */
-}
-
-.panel-margin-small {
-  margin-top: 2ch; /* Adjust the value as needed */
-}
-
-.important-heading {
-  color: var(--primary-accent-color); /* Set your desired text color */
-}
-
-.interests-container {
+.contact-info {
   display: flex;
-  justify-content: space-between; /* Distribute space between the lists */
-  gap: 20px; /* Add space between the lists */
-}
-
-.interests-column {
-  flex: 1; /* Allow each column to take up equal space */
-}
-
-.hover-text {
-  transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.hover-text:hover {
-  color: var(--primary-color-light); /* Change to your desired hover color */
-}
-
-.no-underline {
-  text-decoration: none; /* Remove underline from text */
-  color: inherit; /* Inherit the color from the parent element */
+  align-items: center; /* Center items vertically */
+  gap: 15px; /* Add space between the Linker and the span */
 }
 </style>
