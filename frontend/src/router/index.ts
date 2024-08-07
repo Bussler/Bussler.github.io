@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { MenuItem } from 'primevue/menuitem'
+import { ref, type Ref } from 'vue'
+
+export const currentPage: Ref<string> = ref('')
 
 export const routes = [
   {
@@ -22,6 +25,11 @@ export const routes = [
     name: 'contact',
     component: () => import('@/views/ContactView.vue'),
   },
+  {
+    path: '/latentfeaturegridcompression',
+    name: 'latentfeaturegridcompression',
+    component: () => import('@/views/SoftwareViews/LatentFeatureGridView.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +40,7 @@ export const menu: MenuItem[] = [
   {
     label: 'Home',
     icon: 'pi pi-home',
+    key: 'home',
     command: () => {
       router.push({ name: 'home' })
     },
@@ -39,6 +48,7 @@ export const menu: MenuItem[] = [
   {
     label: 'About Me',
     icon: 'pi pi-user',
+    key: 'about',
     command: () => {
       router.push({ name: 'about' })
     },
@@ -46,10 +56,12 @@ export const menu: MenuItem[] = [
   {
     label: 'Projects',
     icon: 'pi pi-heart',
+    key: 'projects',
     items: [
       {
         label: 'Software',
         icon: 'pi pi-desktop',
+        key: 'software',
         command: () => {
           router.push({ name: 'about' })
         },
@@ -57,6 +69,7 @@ export const menu: MenuItem[] = [
       {
         label: 'Games',
         icon: 'pi pi-prime',
+        key: 'games',
         command: () => {
           router.push({ name: 'about' })
         },
@@ -64,6 +77,7 @@ export const menu: MenuItem[] = [
       {
         label: 'Paper',
         icon: 'pi pi-file',
+        key: 'papers',
         command: () => {
           router.push({ name: 'papers' })
         },
@@ -73,10 +87,15 @@ export const menu: MenuItem[] = [
   {
     label: 'Contact',
     icon: 'pi pi-envelope',
+    key: 'contact',
     command: () => {
       router.push({ name: 'contact' })
     },
   },
 ]
+
+router.beforeEach((to, from) => {
+  currentPage.value = to.name as string
+})
 
 export default router

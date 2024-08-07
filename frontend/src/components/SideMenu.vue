@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import type { MenuItem, MenuItemCommandEvent } from 'primevue/menuitem'
 import type { Ref } from 'vue'
-import { menu } from '@/router'
+import { menu, currentPage } from '@/router'
 
 const selectedItem: Ref<MenuItem | null> = ref(null)
 
@@ -39,7 +39,8 @@ function getIcon(item: MenuItem): string | undefined {
   return item.icon
 }
 
-const isActive = (item: MenuItem) => computed(() => item.label === selectedItem.value?.label)
+// const isActive = (item: MenuItem) => computed(() => item.label === selectedItem.value?.label)
+const isActive = (item: MenuItem) => computed(() => item.key === currentPage.value)
 </script>
 
 <template>
