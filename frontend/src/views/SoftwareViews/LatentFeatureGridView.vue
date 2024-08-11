@@ -79,6 +79,8 @@ onMounted(async () => {
           'The wavelet transformation is able to further enhance the effectiveness of the pruning algorithms. This is because most of the latent feature information of the fV-SRN feature grid are encoded into just a few wavelet coefficients, enabling the pruning algorithms to easily distinguish between important and unimportant parameters.',
           'For a more extensive review of the methods and experiments, please refer to the pdf of the Master’s thesis.',
         ]"
+        :github="'https://github.com/Bussler/Latent_Feature_Grid_Compression'"
+        :paper="'/pdfs/Master_Thesis_Training_Methods_for_Memory_efficient_Volume_Scene_Representation_Networks_Maarten_Bussler.pdf'"
       />
       <!-- <Card class="panel-margin">
         <template #content>
