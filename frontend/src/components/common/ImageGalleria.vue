@@ -5,10 +5,10 @@ const props = defineProps<{
   /**
    * @param images The images to be displayed
    */
-  images: imageItem[]
+  images: ImageItem[]
 }>()
 
-interface imageItem {
+export interface ImageItem {
   itemImageSrc: string | null
   thumbnailImageSrc: string | null
   description: string | null
@@ -100,7 +100,7 @@ onMounted(async () => {
     v-model:activeIndex="activeIndex"
     :value="props.images"
     :numVisible="5"
-    containerStyle="max-width: 900px"
+    containerStyle="max-width: 500px"
     :showThumbnails="showThumbnails"
     :showItemNavigators="true"
     :circular="true"

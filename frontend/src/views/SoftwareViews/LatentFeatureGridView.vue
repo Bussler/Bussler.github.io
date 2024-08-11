@@ -1,27 +1,52 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, type Ref } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
-import ImageGalleria from '@/components/common/ImageGalleria.vue'
+import { type ImageItem } from '@/components/common/ImageGalleria.vue'
+import ProjectInfoComponent from '@/components/ProjectInfoComponent.vue'
 
 const titlebar = useToolbarStore()
 
-const images = ref([
+const toolbarComponents = [
   {
-    itemImageSrc: '/images/deformed/deformed3-1536x866.png',
-    thumbnailImageSrc: '/images/deformed/deformed3-1536x866.png',
-    description: 'Description for Item 1',
-    title: 'Title 1',
+    label: 'Github',
+    icon: 'pi pi-fw pi-github',
+    command: () =>
+      window.open('https://github.com/Bussler/Latent_Feature_Grid_Compression', '_blank'),
   },
   {
-    itemImageSrc: '/images/deformed/deformed3-1536x866.png',
-    thumbnailImageSrc: '/images/deformed/deformed3-1536x866.png',
-    description: 'Description for Item 2',
-    title: 'Title 2',
+    label: 'Paper',
+    icon: 'pi pi-fw pi-file',
+    command: () =>
+      window.open(
+        '/pdfs/Master_Thesis_Training_Methods_for_Memory_efficient_Volume_Scene_Representation_Networks_Maarten_Bussler.pdf',
+        '_blank',
+      ),
+  },
+]
+
+const images: Ref<ImageItem[]> = ref([
+  {
+    itemImageSrc: '/images/latent_feature_grid/Ejecta.png',
+    thumbnailImageSrc: '/images/latent_feature_grid/Ejecta.png',
+    description: 'Estronomy impact simulation',
+    title: 'Ejecta',
+  },
+  {
+    itemImageSrc: '/images/latent_feature_grid/Neurcomp_mhdp_100.png',
+    thumbnailImageSrc: '/images/latent_feature_grid/Neurcomp_mhdp_100.png',
+    description: 'Magnetic turbulence flow simulation',
+    title: 'Turbulence 1',
+  },
+  {
+    itemImageSrc: '/images/latent_feature_grid/Neurcomp_Testdata_100.png',
+    thumbnailImageSrc: '/images/latent_feature_grid/Neurcomp_Testdata_100.png',
+    description: 'Magnetic turbulence flow simulation',
+    title: 'Turbulence 2',
   },
 ])
 
 onMounted(async () => {
-  titlebar.clearToolbarComponents()
+  titlebar.setToolbarComponents(toolbarComponents)
 })
 </script>
 
@@ -29,9 +54,68 @@ onMounted(async () => {
   <Card>
     <template #title>Latent Feature Grid Compression</template>
     <template #content>
-      <div class="image-galleria-container">
-        <ImageGalleria :images="images" />
-      </div>
+      <ProjectInfoComponent
+        :images="images"
+        :about="[
+          'Software Project for my Master’s Thesis to research possibilities of compressing Scene Representation Networks with network pruning algorithms.',
+          'Despite extensive research in the field of volume data compression, modern volume visualization faces the challenge to handle both memory and network bottlenecks when visualizing high resolution volume data at a smooth visual feedback rate. Recently, compression methods that utilize neural networks have gained considerable attention in the visual computing research community. These scene representation networks (SRN), represent encoded data implicitly as a learned function and possess strong compressive capabilities by limiting the complexity of the encoding network.',
+        ]"
+        :goal="[
+          'This thesis proposes to increase the compressiveness of learned data representations by using pruning algorithms in combination with neural networks, thereby enabling the network to learn the best tradeoff between network size and reconstruction quality during training.',
+          'Furthermore, a frequency encoding in form of the wavelet transformation of a network feature space is proposed to enhance the pruning capabilities of dropout methods and further improve the compression quality of SRN.',
+        ]"
+        :background="[
+          'Two SRN architectures are investigated:',
+          ' a) Neurcomp by Lu et al. proposes a compression scheme based on overfitting a deep neural network directly to arbitrary scalar input data. The network is built as a monolithic structure, where the parameters are organised in a set of fully connected layers that are connected by residual blocks. By limiting the amount of available parameters to less than the original data size, the network itself functions as an implicit compressed version of the data.',
+          ' b) fV-SRN by Weiss et al. trains a small network similar to NeRF but extended with a low-dimensional latent code vector to represent the original data. Since most of the memory requirements are concentrated on the latent code grid, and the network itself is quite small, this architecture significantly speeds up the reconstruction task.',
+          'Two kinds of pruning algorithms are analysed:',
+          ' a) Deterministic learnable masks that observe the network parameters (e.g. Smallify by Leclerc et al).',
+          ' b) Probalistic dropout layers that omit each neuron with a specific stochastic dropout probability (e.g. Variational Dropout by Kingma et al).',
+        ]"
+        :results="[
+          'All experiments are performed on the datasets at the top of the website. The fv-SRN, as well as Neurcomp are able to outperform state of the art compression algorithms, like TTHRESH., which indicates that further research and development in refining learning based compression approaches is justified.',
+          'The pruning algorithms work best when applied on large, open networks, where singular nodes have relatively low influence on the reconstruction quality. In this manner the Neurcomp architecture is held back by its dependence on the residual blocks. While these blocks provide stability to the deeper network architecture, they also require the input and output dimension of the blocks to be of the same size, thereby effectively halving the amount of prunable parameters in the network.',
+          'For fV-SRN, on the other hand, pruning is performed on the whole latent feature grid and the pruned network outperforms the unpruned baseline by um to 5 PSNR points.',
+          'The wavelet transformation is able to further enhance the effectiveness of the pruning algorithms. This is because most of the latent feature information of the fV-SRN feature grid are encoded into just a few wavelet coefficients, enabling the pruning algorithms to easily distinguish between important and unimportant parameters.',
+          'For a more extensive review of the methods and experiments, please refer to the pdf of the Master’s thesis.',
+        ]"
+      />
+      <!-- <Card class="panel-margin">
+        <template #content>
+          <TabView>
+            <TabPanel header="Header I">
+              <p class="m-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
+            </TabPanel>
+            <TabPanel header="Header II">
+              <p class="m-0">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci
+                velit, sed quia non numquam eius modi.
+              </p>
+            </TabPanel>
+            <TabPanel header="Header III">
+              <p class="m-0">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+                excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
+                officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
+                eligendi optio cumque nihil impedit quo minus.
+              </p>
+            </TabPanel>
+          </TabView>
+        </template>
+      </Card> -->
     </template>
   </Card>
 </template>
@@ -41,5 +125,8 @@ onMounted(async () => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.panel-margin {
+  margin-top: 3ch; /* Adjust the value as needed */
 }
 </style>

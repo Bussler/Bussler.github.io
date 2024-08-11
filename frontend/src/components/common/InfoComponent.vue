@@ -34,6 +34,7 @@ const props = defineProps<{
 .info-container {
   display: flex;
   align-items: baseline; /* Center items vertically */
+  width: 80%;
 }
 
 .headline {
@@ -43,7 +44,7 @@ const props = defineProps<{
 }
 
 .text {
-  flex: 1 1 74.5%; /* Take up the remaining two-thirds of the container */
+  flex: 1 1 75%; /* Take up the remaining two-thirds of the container */
   list-style-type: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
 }

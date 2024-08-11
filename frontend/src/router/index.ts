@@ -75,7 +75,7 @@ export const menu: MenuItem[] = [
         },
       },
       {
-        label: 'Paper',
+        label: 'Papers',
         icon: 'pi pi-file',
         key: 'papers',
         command: () => {

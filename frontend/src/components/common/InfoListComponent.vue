@@ -45,6 +45,7 @@ interface listItem {
   display: flex;
   justify-content: space-between; /* Distribute space between the lists */
   gap: 20px; /* Add space between the lists */
+  width: 80%;
 }
 
 .info-column {
@@ -71,6 +72,6 @@ interface listItem {
 }
 
 .text {
-  flex: 1 1 70%; /* Take up the remaining two-thirds of the container */
+  flex: 1 1 94%; /* Take up the remaining two-thirds of the container */
 }
 </style>

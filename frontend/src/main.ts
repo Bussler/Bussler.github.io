@@ -25,6 +25,9 @@ import SplitterPanel from 'primevue/splitterpanel'
 import Panel from 'primevue/panel'
 import Accordion from 'primevue/accordion'
 import AccordionTab from 'primevue/accordiontab'
+import Galleria from 'primevue/galleria'
+import TabView from 'primevue/tabview'
+import TabPanel from 'primevue/tabpanel'
 import router from './router'
 import App from './App.vue'
 
@@ -67,5 +70,8 @@ app.component('SplitterPanel', SplitterPanel)
 app.component('Panel', Panel)
 app.component('Accordion', Accordion)
 app.component('AccordionTab', AccordionTab)
+app.component('Galleria', Galleria)
+app.component('TabView', TabView)
+app.component('TabPanel', TabPanel)
 
 app.mount('#app')
