@@ -105,8 +105,8 @@ onMounted(async () => {
 .about-container {
   display: flex;
   align-items: center; /* Center items vertically */
-  gap: 20px; /* Add space between the image and text */
   flex-wrap: wrap;
+  width: 80%;
 }
 
 .extended-space {
@@ -125,6 +125,7 @@ onMounted(async () => {
 
 .about-text {
   flex: 1; /* Allow the text to take up the remaining space */
+  margin-left: 9%;
 }
 
 span i {
