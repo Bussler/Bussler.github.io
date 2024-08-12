@@ -30,6 +30,16 @@ export const routes = [
     name: 'latentfeaturegridcompression',
     component: () => import('@/views/SoftwareViews/LatentFeatureGridView.vue'),
   },
+  {
+    path: '/dsnerf',
+    name: 'dsnerf',
+    component: () => import('@/views/SoftwareViews/DSNeRF.vue'),
+  },
+  {
+    path: '/rag-chatbot',
+    name: 'ragchatbot',
+    component: () => import('@/views/SoftwareViews/RAGChatbot.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
