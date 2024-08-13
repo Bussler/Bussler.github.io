@@ -40,6 +40,11 @@ export const routes = [
     name: 'ragchatbot',
     component: () => import('@/views/SoftwareViews/RAGChatbot.vue'),
   },
+  {
+    path: '/arap',
+    name: 'arap',
+    component: () => import('@/views/SoftwareViews/ARAP.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
