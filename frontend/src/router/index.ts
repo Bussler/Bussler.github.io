@@ -45,6 +45,11 @@ export const routes = [
     name: 'arap',
     component: () => import('@/views/SoftwareViews/ARAP.vue'),
   },
+  {
+    path: '/tthresh',
+    name: 'tthresh',
+    component: () => import('@/views/SoftwareViews/TTHRESH.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
