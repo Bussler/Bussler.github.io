@@ -47,7 +47,7 @@ onMounted(async () => {
 
 <template>
   <Card>
-    <template #title>As-Rigid-As-Possible Surface Modeling (ARAP)</template>
+    <template #title>High Performance Computing (HPC): Abalone</template>
     <template #content>
       <ProjectInfoComponent
         :images="images"

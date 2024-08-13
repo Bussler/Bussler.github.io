@@ -55,6 +55,11 @@ export const routes = [
     name: 'hpc-abalone',
     component: () => import('@/views/SoftwareViews/HPCAbalone.vue'),
   },
+  {
+    path: '/sodoku-solver',
+    name: 'sodoku-solver',
+    component: () => import('@/views/SoftwareViews/SodokuSolver.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
