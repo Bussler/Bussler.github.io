@@ -15,6 +15,8 @@ export interface ImageItem {
   title: string | null
 }
 
+const iamge_max_height = ref('480px')
+
 const galleria = ref()
 const activeIndex = ref(0)
 const showThumbnails = ref(false)
@@ -100,7 +102,6 @@ onMounted(async () => {
     v-model:activeIndex="activeIndex"
     :value="props.images"
     :numVisible="5"
-    containerStyle="max-width: 550px;"
     :showThumbnails="showThumbnails"
     :showItemNavigators="true"
     :showItemNavigatorsOnHover="true"
@@ -122,7 +123,12 @@ onMounted(async () => {
       <img
         :src="slotProps.item.itemImageSrc"
         :alt="slotProps.item.description"
-        :style="[{ width: !fullScreen ? '100%' : '', display: !fullScreen ? 'block' : '' }]"
+        :style="[
+          {
+            display: !fullScreen ? 'block' : '',
+            maxHeight: !fullScreen ? iamge_max_height : '',
+          },
+        ]"
         @click="toggleFullScreen"
       />
     </template>
@@ -134,7 +140,7 @@ onMounted(async () => {
       />
     </template>
     <template #footer>
-      <div class="flex align-items-center bg-black-alpha-90 text-white">
+      <div class="footer-container flex align-items-center bg-black-alpha-90 text-white">
         <Button
           icon="pi pi-list"
           @click="onThumbnailButtonClick"
@@ -165,4 +171,10 @@ onMounted(async () => {
   </Galleria>
 </template>
 
-<style scoped></style>
+<style scoped>
+.footer-container {
+  width: 100%; /* Adjust this value to match the width of the item */
+  /* max-width: 480px; */
+  margin: 0 auto; /* Center the footer */
+}
+</style>
