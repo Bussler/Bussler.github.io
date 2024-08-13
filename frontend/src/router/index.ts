@@ -50,6 +50,11 @@ export const routes = [
     name: 'tthresh',
     component: () => import('@/views/SoftwareViews/TTHRESH.vue'),
   },
+  {
+    path: '/hpc-abalone',
+    name: 'hpc-abalone',
+    component: () => import('@/views/SoftwareViews/HPCAbalone.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
