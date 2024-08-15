@@ -31,6 +31,11 @@ export const routes = [
     component: () => import('@/views/Software.vue'),
   },
   {
+    path: '/games',
+    name: 'games',
+    component: () => import('@/views/Games.vue'),
+  },
+  {
     path: '/latentfeaturegridcompression',
     name: 'latentfeaturegridcompression',
     component: () => import('@/views/SoftwareViews/LatentFeatureGridView.vue'),
@@ -129,7 +134,7 @@ export const menu: MenuItem[] = [
         icon: 'pi pi-prime',
         key: 'games',
         command: () => {
-          router.push({ name: 'about' })
+          router.push({ name: 'games' })
         },
       },
       {
