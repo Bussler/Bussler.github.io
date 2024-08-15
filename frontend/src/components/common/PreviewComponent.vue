@@ -28,7 +28,7 @@ const props = defineProps<{
           />
         </div>
         <ul class="image">
-          <img :src="props.image" class="card-image" />
+          <img :src="props.image" class="card-image" @click="router.push({ name: props.route })" />
         </ul>
       </div>
     </template>
@@ -67,5 +67,6 @@ const props = defineProps<{
   height: auto;
   max-height: 400px;
   object-fit: contain; /* Ensures the image covers the div while maintaining aspect ratio */
+  cursor: pointer;
 }
 </style>
