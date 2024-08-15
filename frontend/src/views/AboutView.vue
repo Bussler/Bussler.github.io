@@ -40,6 +40,10 @@ onMounted(async () => {
             I often participate in Gamejams and other local meetups and am interested in the topics
             of simulation development and machine learning.
           </h4>
+          <h4>
+            I use this site to showcase my projects that amassed over the years. If you are
+            interested in something, feel free to contact me 😄
+          </h4>
           <div class="extended-space"></div>
           <div class="contact-info">
             <Linker

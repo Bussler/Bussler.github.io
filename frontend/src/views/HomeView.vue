@@ -22,33 +22,32 @@ onMounted(async () => {
 
 <template>
   <Card class="background-card">
-    <template #title>Hello there!</template>
+    <template #title></template>
     <template #content>
-      <span
-        >I am Maarten Bussler, a Computer Science & Games Engineering graduate from the Technical
-        University Munich.</span
-      >
-      <br />
-      <span
-        >I use this site to showcase my projects that amassed over the years. If you are interested
-        in something, feel free to contact me 😄</span
-      >
-
-      <div class="panel-margin">
-        <h2 class="important-heading">New</h2>
-        <div class="card-container">
-          <LinkCard
-            link="contact"
-            title="SRN Compression"
-            image="/images/deformed/deformed3-1536x866.png"
-          />
-          <LinkCard link="contact" title="DSNeRF" image="/images/deformed/deformed3-1536x866.png" />
-          <LinkCard
-            link="contact"
-            title="Vectorstorage LLM"
-            image="/images/deformed/deformed3-1536x866.png"
-          />
-        </div>
+      <div class="center-content">
+        <h1>Hello there!</h1>
+        <h4 class="limited-width">
+          I am Maarten Bussler, a Computer Science & Games Engineering graduate from TUM, currently
+          working in the R&D department at IABG.
+        </h4>
+      </div>
+    </template>
+  </Card>
+  <Card>
+    <template #title><h2 class="important-heading">New</h2></template>
+    <template #content>
+      <div class="card-container">
+        <LinkCard
+          link="latentfeaturegridcompression"
+          title="SRN Compression"
+          image="/images/latent_feature_grid/Ejecta.png"
+        />
+        <LinkCard link="dsnerf" title="DSNeRF" image="/images/horns/Horns_Basic.gif" />
+        <LinkCard
+          link="rag-chatbot"
+          title="Vectorstorage LLM"
+          image="/images/rag_chatbot/chatbot-example.png"
+        />
       </div>
     </template>
   </Card>
@@ -56,15 +55,23 @@ onMounted(async () => {
 
 <style scoped>
 .background-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url('/images/deformed/deformed3-1536x866.png');
   background-size: cover; /* Adjust to cover the entire card */
   background-position: center; /* Center the image */
   color: var(--primary-color-text); /* Optional: Adjust text color for better readability */
-  height: 96.5vh; /* Set the desired height */
+  height: 75vh; /* Set the desired height */
 }
 
-.panel-margin {
-  margin-top: 4ch; /* Adjust the value as needed */
+.background-card .center-content {
+  text-align: center;
+}
+
+.limited-width {
+  width: 30vw; /* 30% of the viewport width */
+  margin: 0 auto; /* Center the element */
 }
 
 .card-container {
