@@ -47,7 +47,9 @@ const props = defineProps<{
 }
 
 .card-image {
-  width: 100%; /* Set the image width to 100% of the card's width */
-  height: auto; /* Maintain the aspect ratio */
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
 }
 </style>

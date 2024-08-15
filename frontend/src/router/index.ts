@@ -26,6 +26,11 @@ export const routes = [
     component: () => import('@/views/ContactView.vue'),
   },
   {
+    path: '/software',
+    name: 'software',
+    component: () => import('@/views/Software.vue'),
+  },
+  {
     path: '/latentfeaturegridcompression',
     name: 'latentfeaturegridcompression',
     component: () => import('@/views/SoftwareViews/LatentFeatureGridView.vue'),
@@ -96,7 +101,7 @@ export const menu: MenuItem[] = [
         icon: 'pi pi-desktop',
         key: 'software',
         command: () => {
-          router.push({ name: 'about' })
+          router.push({ name: 'software' })
         },
       },
       {

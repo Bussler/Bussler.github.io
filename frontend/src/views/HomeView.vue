@@ -40,7 +40,7 @@ onMounted(async () => {
         <LinkCard
           link="latentfeaturegridcompression"
           title="SRN Compression"
-          image="/images/latent_feature_grid/Ejecta.png"
+          image="/images/latent_feature_grid/Neurcomp_mhdp_100.png"
         />
         <LinkCard link="dsnerf" title="DSNeRF" image="/images/horns/Horns_Basic.gif" />
         <LinkCard
