@@ -40,7 +40,7 @@ import { RouterView } from 'vue-router'
     .main-container {
       display: block;
       height: 100%;
-      overflow-y: auto;
+      // overflow-y: auto;
       width: 100%;
     }
   }
