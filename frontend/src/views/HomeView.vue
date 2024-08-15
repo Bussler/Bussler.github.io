@@ -58,7 +58,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/images/deformed/deformed3-1536x866.png');
+  background-image: url('/images/deformed/deformed3-upscaled.png');
   background-size: cover; /* Adjust to cover the entire card */
   background-position: center; /* Center the image */
   color: var(--primary-color-text); /* Optional: Adjust text color for better readability */
