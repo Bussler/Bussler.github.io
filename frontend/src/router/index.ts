@@ -65,6 +65,26 @@ export const routes = [
     name: 'sodoku-solver',
     component: () => import('@/views/SoftwareViews/SodokuSolver.vue'),
   },
+  {
+    path: '/nowehere-to-hide',
+    name: 'nowehere-to-hide',
+    component: () => import('@/views/GameViews/NowhereToHide.vue'),
+  },
+  {
+    path: '/the-beending-of-insect',
+    name: 'the-beending-of-insect',
+    component: () => import('@/views/GameViews/TheBeendingOfInsect.vue'),
+  },
+  {
+    path: '/treasure-cave',
+    name: 'treasure-cave',
+    component: () => import('@/views/GameViews/TreasureCave.vue'),
+  },
+  {
+    path: '/voxelhell',
+    name: 'voxelhell',
+    component: () => import('@/views/GameViews/Voxelhell.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
