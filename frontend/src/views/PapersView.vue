@@ -2,7 +2,6 @@
 import { onMounted } from 'vue'
 import { useToolbarStore } from '@/stores/useToolbarStore'
 import Linker from '@/components/common/Linker.vue'
-import AccordionInfoLinkTab from '@/components/common/AccordionInfoLinkTab.vue'
 
 const titlebar = useToolbarStore()
 
