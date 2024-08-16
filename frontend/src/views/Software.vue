@@ -16,6 +16,13 @@ onMounted(async () => {
     <template #title>Software</template>
     <template #content>
       <PreviewComponent
+        headline="Custom Reinforcement Learning"
+        text="I developed an small game in Unity that works as an environment for a reinforcement learning agent to train and play in."
+        image="/images/projectHunters/inference.gif"
+        route="project-hunters"
+      />
+
+      <PreviewComponent
         headline="Master Thesis: SRN Compression"
         text="Software Project for my Master Thesis to research possibilities of compressing Scene Representation Networks with network pruning algorithms."
         image="/images/latent_feature_grid/Neurcomp_mhdp_100.png"

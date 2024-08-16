@@ -71,6 +71,11 @@ export const routes = [
     component: () => import('@/views/SoftwareViews/SodokuSolver.vue'),
   },
   {
+    path: '/project-hunters',
+    name: 'project-hunters',
+    component: () => import('@/views/SoftwareViews/Hunters.vue'),
+  },
+  {
     path: '/nowehere-to-hide',
     name: 'nowehere-to-hide',
     component: () => import('@/views/GameViews/NowhereToHide.vue'),
