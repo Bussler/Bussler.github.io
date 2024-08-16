@@ -95,6 +95,11 @@ export const routes = [
     name: 'voxelhell',
     component: () => import('@/views/GameViews/Voxelhell.vue'),
   },
+  {
+    path: '/gunmancer',
+    name: 'gunmancer',
+    component: () => import('@/views/GameViews/Gunmancer.vue'),
+  },
 ]
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

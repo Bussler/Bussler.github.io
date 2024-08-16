@@ -16,6 +16,13 @@ onMounted(async () => {
     <template #title>Games</template>
     <template #content>
       <PreviewComponent
+        headline="Gunmanacer"
+        text="Gamejam project for the Ludum Dare 55. Play as a Gunmancer, a gun-slinging wizard with the ability to summon weapons."
+        image="/images/gunmancer/GunmancerCover.png"
+        route="gunmancer"
+      />
+
+      <PreviewComponent
         headline="Treasure Cave"
         text="Gamejam project with the goal to experiment with AR on smartphones."
         image="/images/Games/treasurecave/treasureCave1.png"
