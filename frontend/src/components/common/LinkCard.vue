@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
   <router-link :to="props.link" class="no-underline">
-    <Card class="see-through-panel card-quarter-width">
+    <Card class="see-through-panel">
       <template #title>
         <span class="hover-text">{{ props.title }}</span>
       </template>
@@ -40,10 +40,6 @@ const props = defineProps<{
 
 .see-through-panel {
   background-color: rgb(255, 255, 255, 0.1); /* White background with 50% opacity */
-}
-
-.card-quarter-width {
-  width: 25vw; /* Set the width to 1/4 of the viewport width */
 }
 
 .card-image {

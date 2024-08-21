@@ -16,7 +16,6 @@ const toolbarComponents = [
 
 onMounted(async () => {
   titlebar.clearToolbarComponents()
-  // titlebar.setToolbarComponents(toolbarComponents)
 })
 </script>
 
@@ -77,14 +76,27 @@ onMounted(async () => {
 .card-container {
   display: flex;
   justify-content: space-between; /* Distribute space between cards */
-  gap: 10px; /* Optional: Add gap between cards */
+  gap: 15px; /* Optional: Add gap between cards */
 }
 
-.card-container > Card {
-  flex: 1; /* Make each card take equal space */
+.card-container > * {
+  flex: 1 1 30%; /* Each card takes up 1/3 of the container's width */
 }
 
 .important-heading {
   color: var(--primary-accent-color); /* Set your desired text color */
+}
+
+/* Media query for small screens */
+@media (max-width: 950px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+  }
+
+  .card-container > * {
+    flex: 1 1 100%; /* Each card takes up the full width of the container */
+    margin-bottom: 15px; /* Add some space between cards */
+  }
 }
 </style>
