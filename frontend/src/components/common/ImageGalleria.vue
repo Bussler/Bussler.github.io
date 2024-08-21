@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { max } from '@vee-validate/rules'
 import { onMounted, ref, computed } from 'vue'
 
 const props = defineProps<{
@@ -36,7 +37,7 @@ const responsiveOptions = ref([
     numVisible: 4,
   },
   {
-    breakpoint: '575px',
+    breakpoint: '950px',
     numVisible: 1,
   },
 ])
@@ -127,6 +128,7 @@ onMounted(async () => {
           {
             display: !fullScreen ? 'block' : '',
             maxHeight: !fullScreen ? iamge_max_height : '',
+            maxWidth: !fullScreen ? '100%' : '',
           },
         ]"
         @click="toggleFullScreen"
