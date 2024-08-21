@@ -30,12 +30,10 @@ onMounted(async () => {
         <img src="/images/profile_picture.jpg" alt="Maarten Bussler" class="about-image" />
         <div class="about-text">
           <h2>Hey there!</h2>
-          <div class="extended-space"></div>
           <h4>
             I am Maarten Bussler, a Computer Science & Games Engineering graduate from TUM,
             currently working in the R&D department at IABG.
           </h4>
-          <div class="extended-space"></div>
           <h4>
             I often participate in Gamejams and other local meetups and am interested in the topics
             of simulation development and machine learning.
@@ -44,7 +42,6 @@ onMounted(async () => {
             I use this site to showcase my projects that amassed over the years. If you are
             interested in something, feel free to contact me 😄
           </h4>
-          <div class="extended-space"></div>
           <div class="contact-info">
             <Linker
               text="Curriculum Vitae Maarten Bussler"
@@ -108,37 +105,47 @@ onMounted(async () => {
 <style scoped>
 .about-container {
   display: flex;
-  align-items: center; /* Center items vertically */
-  flex-wrap: wrap;
-  width: 80%;
-}
-
-.extended-space {
-  margin: 15px 0; /* Adjust the margin to extend the space */
-}
-.extended-space-more {
-  margin: 25px 0; /* Adjust the margin to extend the space */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 .about-image {
-  width: 100%; /* Set the image width to 100% of its container */
   max-width: 300px;
+  width: 100%; /* Set the image width to 100% of its container */
+  margin-right: 20px;
   height: auto; /* Maintain the aspect ratio */
   border-radius: 30%; /* Optional: Make the image circular */
 }
 
 .about-text {
-  flex: 1; /* Allow the text to take up the remaining space */
-  margin-left: 9%;
-}
-
-span i {
-  margin-right: 0px; /* Add some space between the icon and the text */
+  max-width: 600px;
 }
 
 .contact-info {
   display: flex;
-  align-items: center; /* Center items vertically */
-  gap: 15px; /* Add space between the Linker and the span */
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 950px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
 }
 </style>

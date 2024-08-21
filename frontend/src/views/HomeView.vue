@@ -69,7 +69,7 @@ onMounted(async () => {
 }
 
 .limited-width {
-  width: 30vw; /* 30% of the viewport width */
+  width: 60%; /* 30% of the viewport width */
   margin: 0 auto; /* Center the element */
 }
 
