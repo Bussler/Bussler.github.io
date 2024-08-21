@@ -43,9 +43,9 @@ onMounted(async () => {
         />
         <LinkCard link="dsnerf" title="DSNeRF" image="/images/horns/Horns_Basic.gif" />
         <LinkCard
-          link="rag-chatbot"
-          title="Vectorstorage LLM"
-          image="/images/rag_chatbot/chatbot-example.png"
+          link="project-hunters"
+          title="Custom Reinforcement Learning"
+          image="/images/projectHunters/inference.gif"
         />
       </div>
     </template>
