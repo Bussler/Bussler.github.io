@@ -72,6 +72,33 @@ interface listItem {
 }
 
 .text {
-  flex: 1 1 94%; /* Take up the remaining two-thirds of the container */
+  flex: 1 1 100%; /* Take up the remaining two-thirds of the container */
+}
+
+@media (max-width: 950px) {
+  .info-container {
+    flex-direction: column; /* Stack headline and text vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .headline,
+  .text {
+    flex: 1 1 100%; /* Each takes up the full width of the container */
+    padding-right: 0; /* Remove padding on small screens */
+  }
+
+  .text {
+    margin-top: 15px; /* Add some space between headline and text */
+  }
+
+  .info-list-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: baseline; /* Center columns horizontally */
+  }
+
+  .info-column {
+    flex: 1 1 100%; /* Each column takes up the full width of the container */
+    margin-bottom: 15px; /* Add some space between columns */
+  }
 }
 </style>

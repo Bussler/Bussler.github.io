@@ -52,4 +52,21 @@ const props = defineProps<{
 .text li {
   margin-bottom: 15px; /* Add space between list items */
 }
+
+@media (max-width: 950px) {
+  .info-container {
+    flex-direction: column; /* Stack headline and text vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .headline,
+  .text {
+    flex: 1 1 100%; /* Each takes up the full width of the container */
+    padding-right: 0; /* Remove padding on small screens */
+  }
+
+  .text {
+    margin-top: 15px; /* Add some space between headline and text */
+  }
+}
 </style>
