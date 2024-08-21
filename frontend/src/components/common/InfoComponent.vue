@@ -56,7 +56,7 @@ const props = defineProps<{
 @media (max-width: 950px) {
   .info-container {
     flex-direction: column; /* Stack headline and text vertically */
-    align-items: center; /* Center items horizontally */
+    align-items: baseline; /* Center items horizontally */
   }
 
   .headline,
