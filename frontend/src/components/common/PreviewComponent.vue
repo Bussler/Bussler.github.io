@@ -50,7 +50,7 @@ const props = defineProps<{
 
 .text {
   flex: 1 1 50%;
-  padding-right: 0ch;
+  padding-right: 3ch;
 }
 
 .text .headline {
