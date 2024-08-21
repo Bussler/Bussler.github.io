@@ -69,4 +69,21 @@ const props = defineProps<{
   object-fit: contain; /* Ensures the image covers the div while maintaining aspect ratio */
   cursor: pointer;
 }
+
+@media (max-width: 950px) {
+  .info-container {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .image,
+  .text {
+    flex: 1 1 100%; /* Each takes up the full width of the container */
+    padding-left: 0; /* Remove padding on small screens */
+  }
+
+  .image {
+    margin-bottom: 15px; /* Add some space between image and text */
+  }
+}
 </style>
