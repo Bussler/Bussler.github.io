@@ -184,4 +184,21 @@ const isActive = (item: MenuItem) => computed(() => item.key === currentPage.val
     }
   }
 }
+
+/* Media query for small screens */
+@media (max-width: 950px) {
+  .sidebar-wrapper {
+    .sidebar-container {
+      width: 130px;
+
+      .sidebar-body {
+        ul {
+          li {
+            padding: 2px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

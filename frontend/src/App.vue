@@ -45,4 +45,11 @@ import { RouterView } from 'vue-router'
     }
   }
 }
+
+/* Media query for small screens */
+@media (max-width: 950px) {
+  .content-wapper {
+    margin-left: 110px;
+  }
+}
 </style>
