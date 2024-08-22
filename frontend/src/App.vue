@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import ToolBar from '@/components/ToolBar.vue'
 import SideMenu from '@/components/SideMenu.vue'
+import MobileMenuBar from '@/components/MobileMenuBar.vue'
 import Toast from 'primevue/toast'
 import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <SideMenu />
+  <SideMenu class="side-menu" />
+  <MobileMenuBar class="menu-bar" />
 
   <div class="content-wapper">
     <div class="main">
@@ -22,6 +24,10 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style lang="scss" scoped>
+.menu-bar {
+  display: none;
+}
+
 .content-wapper {
   transition: margin-left 0.3s;
   margin-left: 250px;
@@ -49,7 +55,13 @@ import { RouterView } from 'vue-router'
 /* Media query for small screens */
 @media (max-width: 950px) {
   .content-wapper {
-    margin-left: 110px;
+    margin-left: 0px;
+  }
+  .menu-bar {
+    display: block;
+  }
+  .side-menu {
+    display: none;
   }
 }
 </style>

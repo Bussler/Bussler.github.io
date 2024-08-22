@@ -28,6 +28,7 @@ import AccordionTab from 'primevue/accordiontab'
 import Galleria from 'primevue/galleria'
 import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
+import Menubar from 'primevue/menubar'
 import router from './router'
 import App from './App.vue'
 
@@ -73,5 +74,6 @@ app.component('AccordionTab', AccordionTab)
 app.component('Galleria', Galleria)
 app.component('TabView', TabView)
 app.component('TabPanel', TabPanel)
+app.component('Menubar', Menubar)
 
 app.mount('#app')
