@@ -12,7 +12,7 @@ import { RouterView } from 'vue-router'
 
   <div class="content-wapper">
     <div class="main">
-      <div class="main-container px-5 pt-3">
+      <div class="main-container pt-3">
         <ToolBar />
         <RouterView />
       </div>
@@ -48,6 +48,8 @@ import { RouterView } from 'vue-router'
       height: 100%;
       // overflow-y: auto;
       width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 }
@@ -56,6 +58,12 @@ import { RouterView } from 'vue-router'
 @media (max-width: 950px) {
   .content-wapper {
     margin-left: 0px;
+    .main {
+      .main-container {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+    }
   }
   .menu-bar {
     display: block;

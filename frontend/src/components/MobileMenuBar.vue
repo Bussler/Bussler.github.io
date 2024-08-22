@@ -47,7 +47,7 @@ const isActive = (item: MenuItem) => computed(() => item.key === currentPage.val
   align-items: center;
   justify-content: space-between;
   margin-left: 10px;
-  margin-right: 90px;
+  margin-right: 95px;
 }
 
 .active {
