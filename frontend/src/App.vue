@@ -40,7 +40,7 @@ import { RouterView } from 'vue-router'
     flex-shrink: 0;
     height: 100vh;
     max-width: 100%;
-    min-width: 420px;
+    min-width: 220px;
     width: 0;
 
     .main-container {
