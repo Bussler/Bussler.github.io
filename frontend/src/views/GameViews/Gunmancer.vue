@@ -8,7 +8,7 @@ const titlebar = useToolbarStore()
 
 const toolbarComponents = [
   {
-    label: 'zGitHub',
+    label: 'GitHub',
     icon: 'pi pi-fw pi-github',
     command: () =>
       window.open('https://github.com/Bussler/LudumDare55?tab=readme-ov-file', '_blank'),
