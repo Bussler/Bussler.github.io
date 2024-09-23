@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import type { MenuItem } from 'primevue/menuitem'
 import { ref, type Ref } from 'vue'
 
@@ -107,7 +107,7 @@ export const routes = [
   },
 ]
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 }
