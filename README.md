@@ -12,11 +12,12 @@ The website is used for showing personal projects that amassed over the time.
 
 `npm run format`
 
-### Build
+### Build and run on github pages
 
-`npm run build`
+- `npm run build`
+- copy `dist` folder to the `gh-pages` branch, commit and push.
 
-### Serve
+### Serve locally
 
 `npm run dev`
 
