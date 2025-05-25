@@ -43,11 +43,6 @@ onMounted(async () => {
             interested in something, feel free to contact me 😄
           </h4>
           <div class="contact-info">
-            <Linker
-              text="Curriculum Vitae Maarten Bussler"
-              reference="/pdfs/CVMaartenBussler.pdf"
-              icon="pi pi-paperclip"
-            />
             <span><i class="pi pi-envelope"></i> maarten.bussler@gmail.com</span>
           </div>
         </div>
@@ -69,15 +64,18 @@ onMounted(async () => {
           {
             headline: 'Computer Science',
             textItems: [
-              'Deep Machine Learning',
               'Game/ Simulation Development',
+              'Deep Machine Learning',
               'Computer Vision',
               'Visual data analytics and data visualization, especially the possibilities of volume data',
               'Multiprocessing and async (parallel) programming',
               'Exploring and testing new technologies, attending Hackathons',
             ],
           },
-          { headline: 'Freetime', textItems: ['Guitar', 'Tennis', 'Bouldering'] },
+          {
+            headline: 'Freetime',
+            textItems: ['Guitar', 'Tennis', 'Bouldering', 'Building a second brain with Obsidian'],
+          },
         ]"
       />
 
@@ -87,9 +85,10 @@ onMounted(async () => {
           {
             headline: '',
             textItems: [
-              'Python, Pytorch',
-              'C/ C++',
-              'C#',
+              'Python',
+              'Rust',
+              'Worked with C/ C++, C#',
+              'Pytorch',
               'Fullstack (Vuejs, Fastapi, Sqalchemy)',
               'RabbitMQ',
               'MPI, OpenMP',

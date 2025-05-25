@@ -19,12 +19,6 @@ onMounted(async () => {
       <div class="extended-space"></div>
 
       <Accordion :multiple="true">
-        <!-- <AccordionInfoLinkTab
-          reference="/pdfs/CVMaartenBussler.pdf"
-          text="Curriculum Vitae Maarten Bussler"
-          icon="pi pi-paperclip"
-          description="Loool"
-        /> -->
         <AccordionTab>
           <template #header>
             <Linker
