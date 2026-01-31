@@ -36,7 +36,7 @@ onMounted(async () => {
           </h4>
           <h4>
             I often participate in Gamejams and other local meetups and am interested in the topics
-            of simulation development and machine learning.
+            of simulation development and reinforcement learning.
           </h4>
           <h4>
             I use this site to showcase my projects that amassed over the years. If you are
@@ -54,7 +54,7 @@ onMounted(async () => {
           'I grew up in Cuxhaven, northern Germany.',
           'During highschool, I developed an interest in programming and computer science. After the Abitur, I moved to Munich to study Informatics with a focus on Games Engineering at the TUM.',
           'While at TUM, I became increasingly engaged in the exploration of integrating machine learning with computer vision tasks. My studies culminated in a thesis on the topic of efficient representation and compression of volumentric scene data using neural networks.',
-          'After university, I began working at the Innovationszentrum of IABG, where I focus on simulation and reinforcement learning topics.',
+          'After university, I began working at the R&D department of IABG, where I focus on simulation and reinforcement learning topics.',
         ]"
       />
 
@@ -65,7 +65,7 @@ onMounted(async () => {
             headline: 'Computer Science',
             textItems: [
               'Game/ Simulation Development',
-              'Deep Machine Learning',
+              'Deep Reinforcement Learning',
               'Computer Vision',
               'Visual data analytics and data visualization, especially the possibilities of volume data',
               'Multiprocessing and async (parallel) programming',
@@ -80,20 +80,33 @@ onMounted(async () => {
       />
 
       <InfoListComponent
-        headline="Technical Skills"
+        headline="Skills"
         :list-items="[
           {
-            headline: '',
+            headline: 'Programming Languages',
+            textItems: ['Python', 'Rust', 'Worked with C/ C++, C#'],
+          },
+          {
+            headline: 'Job reladed skills/ Frameworks',
             textItems: [
-              'Python',
-              'Rust',
-              'Worked with C/ C++, C#',
               'Pytorch',
-              'Fullstack (Vuejs, Fastapi, Sqalchemy)',
+              'Gymnasium',
+              'Unity3D',
+              'OpenCV',
+              'FastAPI',
               'RabbitMQ',
-              'MPI, OpenMP',
-              'Docker, Kubernetes',
-              'Unity Game Development',
+              `Docker`,
+              'Kubernetes',
+              'Git',
+            ],
+          },
+          {
+            headline: 'Organizational Skills',
+            textItems: [
+              'Agile Development and Project Management',
+              'Teamwork',
+              'Stakeholder Management',
+              'Coordination',
             ],
           },
         ]"
