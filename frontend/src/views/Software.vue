@@ -16,6 +16,13 @@ onMounted(async () => {
     <template #title>Software</template>
     <template #content>
       <PreviewComponent
+        headline="Reinfocement Learning with Delayed Rewards"
+        text="Investigate reinforcement learning in custom Rust environments with delayed rewards."
+        image="/images/rl-delayed-reward/result_ppo_with_lstm.gif"
+        route="rl-delayed-rewards"
+      />
+
+      <PreviewComponent
         headline="Custom Reinforcement Learning"
         text="I developed an small game in Unity that works as an environment for a reinforcement learning agent to train and play in."
         image="/images/projectHunters/inference.gif"

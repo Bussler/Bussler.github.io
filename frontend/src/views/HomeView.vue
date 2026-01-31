@@ -43,9 +43,9 @@ onMounted(async () => {
         />
         <LinkCard link="dsnerf" title="DSNeRF" image="/images/horns/Horns_Basic.gif" />
         <LinkCard
-          link="project-hunters"
-          title="Custom Reinforcement Learning"
-          image="/images/projectHunters/inference.gif"
+          link="rl-delayed-rewards"
+          title="RL with Delayed Rewards"
+          image="/images/rl-delayed-reward/result_ppo_with_lstm.gif"
         />
       </div>
     </template>

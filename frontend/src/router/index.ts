@@ -76,6 +76,11 @@ export const routes = [
     component: () => import('@/views/SoftwareViews/Hunters.vue'),
   },
   {
+    path: '/rl-delayed-rewards',
+    name: 'rl-delayed-rewards',
+    component: () => import('@/views/SoftwareViews/RLDelayedReward.vue'),
+  },
+  {
     path: '/nowehere-to-hide',
     name: 'nowehere-to-hide',
     component: () => import('@/views/GameViews/NowhereToHide.vue'),
